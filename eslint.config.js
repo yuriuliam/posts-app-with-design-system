@@ -3,6 +3,8 @@ import { FlatCompat } from '@eslint/eslintrc'
 import eslint from '@eslint/js'
 
 // @ts-expect-error This plugin does not yet correctly exports their types.
+import drizzle from 'eslint-plugin-drizzle'
+// @ts-expect-error This plugin does not yet correctly exports their types.
 import pluginImport from 'eslint-plugin-import'
 // @ts-expect-error This plugin does not yet correctly exports their types.
 import jsxA11Y from 'eslint-plugin-jsx-a11y'
@@ -27,6 +29,20 @@ const configs = Object.freeze({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     plugins: { 'jsx-a11y': jsxA11Y },
     languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } },
+  }),
+  drizzle: tseslint.config({
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    plugins: { drizzle },
+    rules: {
+      'drizzle/enforce-delete-with-where': [
+        'error',
+        { drizzleObjectName: ['db', 'ctx.db'] },
+      ],
+      'drizzle/enforce-update-with-where': [
+        'error',
+        { drizzleObjectName: ['db', 'ctx.db'] },
+      ],
+    },
   }),
   import: tseslint.config(compat.extends('plugin:import/recommended'), {
     name: '@app/import',
@@ -109,6 +125,7 @@ export default tseslint.config(
   configs.next,
   // Medium Priorities
   configs.a11y,
+  configs.drizzle,
   configs.import,
   configs.prettier,
   configs.eslint,
