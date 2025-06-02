@@ -1,0 +1,15 @@
+{
+  "shadow": {
+    "$type": "shadow",
+    "1": { "$value": "0px 4px 4px rgba(0, 0, 0, 0.03)" },
+    "2": { "$value": "0px 6px 8px rgba(0, 0, 0, 0.04)" },
+    "3": { "$value": "0px 8px 10px rgba(0, 0, 0, 0.05)" },
+    "4": { "$value": "0px 10px 15px rgba(0, 0, 0, 0.06)" },
+    "5": { "$value": "0px 15px 20px rgba(0, 0, 0, 0.07)" },
+    "6": { "$value": "0px 25px 30px rgba(0, 0, 0, 0.08)" },
+    "7": { "$value": "0px 35px 40px rgba(0, 0, 0, 0.09)" },
+    "8": { "$value": "0px 40px 50px rgba(0, 0, 0, 0.1)" },
+    "9": { "$value": "0px 50px 60px rgba(0, 0, 0, 0.11)" },
+    "10": { "$value": "0px 60px 70px rgba(0, 0, 0, 0.12)" }
+  }
+}

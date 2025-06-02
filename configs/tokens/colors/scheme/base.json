@@ -1,0 +1,71 @@
+{
+  "scheme": {
+    "base": {
+      "$type": "color",
+      "default": {
+        "surface": {
+          "primary": { "$value": "{scheme.foundation.light.neutral.0}" },
+          "secondary": { "$value": "{scheme.foundation.light.neutral.50}" },
+          "tertiary": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "onPrimary": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "onSecondary": { "$value": "{scheme.foundation.light.neutral.600}" },
+          "onTertiary": { "$value": "{scheme.foundation.light.neutral.400}" }
+        },
+        "container": {
+          "primary": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "onPrimary": { "$value": "{scheme.foundation.light.neutral.50}" },
+          "onSecondary": { "$value": "{scheme.foundation.light.neutral.300}" },
+          "onTertiary": { "$value": "{scheme.foundation.light.neutral.500}" }
+        },
+        "info": {
+          "bg": { "$value": "{scheme.foundation.light.info.50}" },
+          "label": { "$value": "{scheme.foundation.light.info.600}" },
+          "accent": { "$value": "{scheme.foundation.light.info.400}" },
+          "data": { "$value": "{scheme.foundation.light.info.500}" }
+        },
+        "success": {
+          "bg": { "$value": "{scheme.foundation.light.success.50}" },
+          "label": { "$value": "{scheme.foundation.light.success.600}" },
+          "accent": { "$value": "{scheme.foundation.light.success.400}" },
+          "data": { "$value": "{scheme.foundation.light.success.500}" }
+        },
+        "warning": {
+          "bg": { "$value": "{scheme.foundation.light.warning.50}" },
+          "label": { "$value": "{scheme.foundation.light.warning.600}" },
+          "accent": { "$value": "{scheme.foundation.light.warning.400}" },
+          "data": { "$value": "{scheme.foundation.light.warning.500}" }
+        },
+        "critical": {
+          "bg": { "$value": "{scheme.foundation.light.critical.50}" },
+          "label": { "$value": "{scheme.foundation.light.critical.600}" },
+          "accent": { "$value": "{scheme.foundation.light.critical.400}" },
+          "data": { "$value": "{scheme.foundation.light.critical.500}" }
+        },
+        "separation": {
+          "divider": { "$value": "{scheme.dynamic.light.darken.100}" },
+          "threadLines": { "$value": "{scheme.foundation.light.neutral.200}" },
+          "threadBg": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "dimmer": { "$value": "{scheme.dynamic.light.darken.500}" }
+        },
+        "inner": { "$value": "unset" }
+      },
+      "media": {
+        "surface": {
+          "primary": { "$value": "{scheme.static.dark.darken.900}" },
+          "secondary": { "$value": "{scheme.static.dark.darken.700}" },
+          "tertiary": { "$value": "{scheme.static.dark.darken.500}" },
+          "onPrimary": { "$value": "{scheme.static.dark.lighten.900}" },
+          "onSecondary": { "$value": "{scheme.static.dark.lighten.900}" },
+          "onTertiary": { "$value": "{scheme.static.dark.lighten.600}" }
+        },
+        "container": {
+          "primary": { "$value": "{scheme.static.dark.lighten.900}" },
+          "onPrimary": { "$value": "{scheme.static.dark.darken.900}" },
+          "onSecondary": { "$value": "{scheme.static.dark.darken.700}" },
+          "onTertiary": { "$value": "{scheme.static.dark.darken.500}" }
+        },
+        "inner": { "$value": "{scheme.dynamic.dark.darken.500}" }
+      }
+    }
+  }
+}

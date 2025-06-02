@@ -1,0 +1,28 @@
+@use "~/styles/design" as *;
+
+@mixin layout-grid {
+  padding-right: var(--fg-margin);
+  padding-left: var(--fg-margin);
+
+  gap: var(--fg-gutter);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  
+  --fg-margin: 16px;
+  --fg-gutter: 8px;
+
+  @include media-phone-lg {
+    --fg-margin: 24px;
+    --fg-gutter: 8px;
+  }
+
+  @include media-tablet-md {
+    --fg-margin: 32px;
+    --fg-gutter: 12px;
+  }
+
+  @include media-desktop-md {
+    --fg-margin: 112px;
+    --fg-gutter: 24px;
+  }
+}

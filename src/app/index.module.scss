@@ -1,0 +1,35 @@
+.header {
+  @include layout-grid;
+
+  & {
+    position: relative;
+    min-height: 100dvh;
+    background: $schemeBaseSurfacePrimary;
+    color: $schemeBaseSurfaceOnPrimary;
+  }
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    grid-column: 3 / 11;
+    
+    @include media-tablet-md {
+      grid-column: 4 / 10;
+    }
+    
+    @include media-desktop-md {
+      grid-column: 5 / 9;
+    }
+
+    & > p, & > h1 {
+      text-align: center;
+    }
+
+    & > p {
+      max-width: 352px;
+    }
+  }
+}

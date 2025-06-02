@@ -1,0 +1,58 @@
+body {
+  font-family: var(--font-family-body);
+
+  background: $schemeBaseSurfaceOnPrimary;
+  color: $schemeBaseSurfacePrimary;
+}
+
+h1 {
+  @include display-xl;
+
+  &[data-bold] {
+    @include display-xl-bold;
+  }
+}
+
+h2 {
+  @include display-lg;
+
+  &[data-bold] {
+    @include display-lg-bold;
+  }
+}
+
+h3 {
+  @include display-md;
+
+  &[data-bold] {
+    @include display-md-bold;
+  }
+}
+
+h4 {
+  @include display-sm;
+
+  &[data-bold] {
+    @include display-sm-bold;
+  }
+}
+
+h5 {
+  @include display-xs;
+
+  &[data-bold] {
+    @include display-xs-bold;
+  }
+}
+
+h6 {
+  @include display-xs;
+
+  &[data-bold] {
+    @include display-xs-bold;
+  }
+}
+
+p, span {
+  @include body-md;
+}

@@ -1,0 +1,9 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "body": { "$value": "var(--font-inter)" },
+      "display": { "$value": "var(--font-plus-jakarta-sans)" }
+    }
+  }
+}

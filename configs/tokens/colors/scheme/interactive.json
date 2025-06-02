@@ -1,0 +1,202 @@
+{
+  "scheme": {
+    "interactive": {
+      "$type": "color",
+      "default": {
+        "neutral": {
+          "enabled": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "hovered": { "$value": "{scheme.foundation.light.neutral.800}" },
+          "focused": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "pressed": { "$value": "{scheme.foundation.light.neutral.700}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.neutral.50}" },
+          "accent": { "$value": "{scheme.foundation.light.neutral.50}" }
+        },
+        "brand": {
+          "enabled": { "$value": "{scheme.foundation.light.brand.600}" },
+          "hovered": { "$value": "{scheme.foundation.light.brand.700}" },
+          "focused": { "$value": "{scheme.foundation.light.brand.600}" },
+          "pressed": { "$value": "{scheme.foundation.light.brand.800}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.brand.50}" },
+          "accent": { "$value": "{scheme.foundation.light.brand.50}" }
+        },
+        "info": {
+          "enabled": { "$value": "{scheme.foundation.light.info.600}" },
+          "hovered": { "$value": "{scheme.foundation.light.info.700}" },
+          "focused": { "$value": "{scheme.foundation.light.info.600}" },
+          "pressed": { "$value": "{scheme.foundation.light.info.800}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.info.50}" },
+          "accent": { "$value": "{scheme.foundation.light.info.50}" }
+        },
+        "success": {
+          "enabled": { "$value": "{scheme.foundation.light.success.600}" },
+          "hovered": { "$value": "{scheme.foundation.light.success.700}" },
+          "focused": { "$value": "{scheme.foundation.light.success.600}" },
+          "pressed": { "$value": "{scheme.foundation.light.success.800}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.success.50}" },
+          "accent": { "$value": "{scheme.foundation.light.success.50}" }
+        },
+        "warning": {
+          "enabled": { "$value": "{scheme.foundation.light.warning.400}" },
+          "hovered": { "$value": "{scheme.foundation.light.warning.500}" },
+          "focused": { "$value": "{scheme.foundation.light.warning.400}" },
+          "pressed": { "$value": "{scheme.foundation.light.warning.600}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.warning.900}" },
+          "accent": { "$value": "{scheme.foundation.light.warning.900}" }
+        },
+        "critical": {
+          "enabled": { "$value": "{scheme.foundation.light.critical.600}" },
+          "hovered": { "$value": "{scheme.foundation.light.critical.700}" },
+          "focused": { "$value": "{scheme.foundation.light.critical.600}" },
+          "pressed": { "$value": "{scheme.foundation.light.critical.800}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.critical.50}" },
+          "accent": { "$value": "{scheme.foundation.light.critical.50}" }
+        },
+        "secondary": {
+          "enabled": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "hovered": { "$value": "{scheme.foundation.light.neutral.200}" },
+          "focused": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "pressed": { "$value": "{scheme.foundation.light.neutral.300}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "accent": { "$value": "{scheme.foundation.light.neutral.900}" }
+        },
+        "tertiary": {
+          "enabled": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "hovered": { "$value": "{scheme.foundation.light.neutral.200}" },
+          "focused": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "pressed": { "$value": "{scheme.foundation.light.neutral.300}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "accent": { "$value": "{scheme.foundation.light.neutral.900}" }
+        },
+        "input": {
+          "enabled": { "$value": "{scheme.foundation.light.neutral.0}" },
+          "hovered": { "$value": "{scheme.foundation.light.neutral.50}" },
+          "focused": { "$value": "{scheme.foundation.light.neutral.0}" },
+          "pressed": { "$value": "{scheme.foundation.light.neutral.100}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "accent": { "$value": "{scheme.foundation.light.neutral.500}" },
+          "placeholder": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "helper": { "$value": "{scheme.foundation.light.neutral.600}" },
+          "border": { "$value": "{scheme.foundation.light.neutral.300}" },
+          "borderFocused": { "$value": "{scheme.foundation.light.neutral.1000}" }
+        },
+        "boolean": {
+          "off": {
+            "enabled": { "$value": "{scheme.foundation.light.neutral.100}" },
+            "hovered": { "$value": "{scheme.foundation.light.neutral.50}" },
+            "focused": { "$value": "{scheme.foundation.light.neutral.100}" }
+          },
+          "on": {
+            "enabled": { "$value": "{scheme.static.light.darken.900}" },
+            "hovered": { "$value": "{scheme.static.light.darken.800}" },
+            "focused": { "$value": "{scheme.static.light.darken.900}" }
+          },
+          "foreground": { "$value": "{scheme.foundation.light.neutral.0}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
+          "label": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "accent": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "border": { "$value": "{scheme.foundation.light.neutral.300}" }
+        },
+        "toggle": {
+          "off": {
+            "enabled": { "$value": "{scheme.foundation.light.neutral.300}" },
+            "hovered": { "$value": "{scheme.foundation.light.neutral.400}" },
+            "focused": { "$value": "{scheme.foundation.light.neutral.300}" }
+          },
+          "on": {
+            "enabled": { "$value": "{scheme.static.light.darken.900}" },
+            "hovered": { "$value": "{scheme.static.light.darken.700}" },
+            "focused": { "$value": "{scheme.static.light.darken.600}" }
+          },
+          "foreground": { "$value": "{scheme.foundation.light.neutral.0}" },
+          "ring": { "$value": "{scheme.dynamic.light.darken.600}" },
+          "label": { "$value": "{scheme.foundation.light.neutral.0}" },
+          "accent": { "$value": "{scheme.foundation.light.neutral.200}" }
+        }
+      },
+      "media": {
+        "neutral": {
+          "enabled": { "$value": "{scheme.static.dark.lighten.700}" },
+          "hovered": { "$value": "{scheme.static.dark.lighten.600}" },
+          "focused": { "$value": "{scheme.static.dark.lighten.700}" },
+          "pressed": { "$value": "{scheme.static.dark.lighten.900}" },
+          "ring": { "$value": "{scheme.static.dark.lighten.200}" },
+          "label": { "$value": "{scheme.static.dark.darken.1000}" },
+          "accent": { "$value": "{scheme.static.dark.darken.1000}" }
+        },
+        "secondary": {
+          "enabled": { "$value": "{scheme.static.dark.lighten.500}" },
+          "hovered": { "$value": "{scheme.static.dark.lighten.600}" },
+          "focused": { "$value": "{scheme.static.dark.lighten.500}" },
+          "pressed": { "$value": "{scheme.static.dark.lighten.700}" },
+          "ring": { "$value": "{scheme.static.dark.lighten.200}" },
+          "label": { "$value": "{scheme.static.dark.darken.1000}" },
+          "accent": { "$value": "{scheme.static.dark.darken.1000}" }
+        },
+        "tertiary": {
+          "enabled": { "$value": "{scheme.static.dark.lighten.500}" },
+          "hovered": { "$value": "{scheme.static.dark.lighten.400}" },
+          "focused": { "$value": "{scheme.static.dark.lighten.300}" },
+          "pressed": { "$value": "{scheme.static.dark.lighten.500}" },
+          "ring": { "$value": "{scheme.static.dark.lighten.200}" },
+          "label": { "$value": "{scheme.static.dark.darken.1000}" },
+          "accent": { "$value": "{scheme.static.dark.darken.1000}" }
+        },
+        "input": {
+          "enabled": { "$value": "{scheme.static.dark.lighten.700}" },
+          "hovered": { "$value": "{scheme.static.dark.lighten.600}" },
+          "focused": { "$value": "{scheme.static.dark.lighten.700}" },
+          "pressed": { "$value": "{scheme.static.dark.lighten.700}" },
+          "ring": { "$value": "{scheme.static.dark.lighten.200}" },
+          "label": { "$value": "{scheme.static.dark.darken.1000}" },
+          "accent": { "$value": "{scheme.static.dark.darken.1000}" },
+          "placeholder": { "$value": "{scheme.static.dark.darken.600}" },
+          "helper": { "$value": "{scheme.static.dark.lighten.600}" },
+          "border": { "$value": "{scheme.static.dark.lighten.200}" },
+          "borderFocused": { "$value": "{scheme.static.dark.lighten.1000}" }
+        },
+        "boolean": {
+          "off": {
+            "enabled": { "$value": "{scheme.static.dark.lighten.300}" },
+            "hovered": { "$value": "{scheme.static.dark.lighten.400}" },
+            "focused": { "$value": "{scheme.static.dark.lighten.300}" }
+          },
+          "on": {
+            "enabled": { "$value": "{scheme.static.dark.lighten.900}" },
+            "hovered": { "$value": "{scheme.static.dark.lighten.800}" },
+            "focused": { "$value": "{scheme.static.dark.lighten.900}" }
+          },
+          "foreground": { "$value": "{scheme.static.dark.darken.1000}" },
+          "ring": { "$value": "{scheme.static.dark.lighten.200}" },
+          "label": { "$value": "{scheme.static.dark.lighten.1000}" },
+          "accent": { "$value": "{scheme.static.dark.lighten.1000}" },
+          "border": { "$value": "{scheme.static.dark.lighten.500}" }
+        },
+        "toggle": {
+          "off": {
+            "enabled": { "$value": "{scheme.static.dark.lighten.300}" },
+            "hovered": { "$value": "{scheme.static.dark.lighten.400}" },
+            "focused": { "$value": "{scheme.static.dark.lighten.300}" }
+          },
+          "on": {
+            "enabled": { "$value": "{scheme.static.dark.lighten.900}" },
+            "hovered": { "$value": "{scheme.static.dark.lighten.700}" },
+            "focused": { "$value": "{scheme.static.dark.lighten.600}" }
+          },
+          "foreground": { "$value": "{scheme.static.dark.darken.1000}" },
+          "ring": { "$value": "{scheme.static.dark.lighten.200}" },
+          "label": { "$value": "{scheme.static.dark.lighten.1000}" },
+          "accent": { "$value": "{scheme.static.dark.lighten.1000}" }
+        }
+      }
+    }
+  }
+}

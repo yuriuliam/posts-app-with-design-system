@@ -1,0 +1,13 @@
+{
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "subtle": { "$value": "0.0625rem" },
+      "thin": { "$value": "0.125rem" },
+      "line": { "$value": "0.1875rem" },
+      "medium": { "$value": "0.25rem" },
+      "thick": { "$value": "0.375rem" },
+      "bold": { "$value": "0.5rem" }
+    }
+  }
+}

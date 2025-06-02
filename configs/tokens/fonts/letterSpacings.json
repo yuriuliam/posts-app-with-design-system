@@ -1,0 +1,10 @@
+{
+  "font": {
+    "letterSpacing": {
+      "$type": "dimension",
+      "sm": { "$value": "0.01563rem" },
+      "md": { "$value": "0.04688rem" },
+      "lg": { "$value": "0.0625rem" }
+    }
+  }
+}

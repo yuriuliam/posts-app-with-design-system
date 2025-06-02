@@ -1,0 +1,53 @@
+.root {
+  color: $schemeInteractiveBrandEnabled;
+
+  transition: $transitionDurationMedium;
+
+  &:focus {
+    color: $schemeInteractiveBrandFocused;
+  }
+
+  &:hover {
+    color: $schemeInteractiveBrandHovered;
+  }
+
+  &:active {
+    color: $schemeInteractiveBrandPressed;
+  }
+
+  &:not([href]) {
+    color: $schemeBaseSurfaceOnPrimary;
+  }
+}
+
+.sizeLg {
+  @include link-lg;
+
+  &[data-tight] {
+    @include link-lg-tight;
+  }
+}
+
+.sizeMd {
+  @include link-md;
+
+  &[data-tight] {
+    @include link-md-tight;
+  }
+}
+
+.sizeSm {
+  @include link-sm;
+
+  &[data-tight] {
+    @include link-sm-tight;
+  }
+}
+
+.sizeXs {
+  @include link-xs;
+
+  &[data-tight] {
+    @include link-xs-tight;
+  }
+}

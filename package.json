@@ -1,0 +1,63 @@
+{
+  "name": "www",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "check": "next lint && tsc --noEmit",
+    "dev": "next dev --turbo",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "preview": "next build && next start",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "generate:icons": "tsx --env-file=.env.figma.local ./scripts/generate-icons.ts",
+    "generate:styles": "tsx ./scripts/generate-styles.ts"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.13.6",
+    "@tanstack/react-query": "^5.79.0",
+    "@trpc/client": "^11.2.0",
+    "@trpc/react-query": "^11.2.0",
+    "@trpc/server": "^11.2.0",
+    "class-variance-authority": "^0.7.1",
+    "dedent": "^1.6.0",
+    "es-toolkit": "^1.38.0",
+    "linkedom": "^0.18.10",
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "server-only": "^0.0.1",
+    "superjson": "^2.2.2",
+    "vfile": "^6.0.3",
+    "zod": "^3.25.46"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.8.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@figma/rest-api-spec": "^0.31.0",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "babel-plugin-react-compiler": "19.1.0-rc.2",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^15.3.3",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.4.1",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.89.1",
+    "style-dictionary": "^5.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0"
+  },
+  "ct3aMetadata": {
+    "initVersion": "7.39.3"
+  },
+  "packageManager": "pnpm@9.6.0"
+}

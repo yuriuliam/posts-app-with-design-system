@@ -1,0 +1,7 @@
+{
+  "blur": {
+    "$type": "dimension",
+    "light": { "$value": "15px" },
+    "heavy": { "$value": "30px" }
+  }
+}

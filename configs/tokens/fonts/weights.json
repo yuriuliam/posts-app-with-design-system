@@ -1,0 +1,9 @@
+{
+  "font": {
+    "weight": {
+      "$type": "fontWeight",
+      "md": { "$value": 400 },
+      "lg": { "$value": 700 }
+    }
+  }
+}

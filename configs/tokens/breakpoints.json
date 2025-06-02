@@ -1,0 +1,9 @@
+{
+  "breakpoint": {
+    "$type": "dimension",
+    "phone:sm": { "$value": "375px" },
+    "phone:lg": { "$value": "390px" },
+    "tablet:md": { "$value": "1024px" },
+    "desktop:md": { "$value": "1440px" }
+  }
+}

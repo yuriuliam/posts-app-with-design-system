@@ -1,0 +1,11 @@
+{
+  "border": {
+    "radii": {
+      "$type": "dimension",
+      "none": { "$value": "0rem" },
+      "sm": { "$value": "0.5rem" },
+      "md": { "$value": "0.75rem" },
+      "full": { "$value": "9999px" }
+    }
+  }
+}

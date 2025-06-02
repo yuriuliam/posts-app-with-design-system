@@ -1,0 +1,8 @@
+{
+  "name": {
+    "default": "App",
+    "template": "App | %s"
+  },
+  "shortName": "App",
+  "description": "Welcome to your app!"
+}

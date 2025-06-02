@@ -1,0 +1,20 @@
+{
+  "font": {
+    "size": {
+      "$type": "dimension",
+      "3xs": { "$value": "0.75rem" },
+      "2xs": { "$value": "0.8125rem" },
+      "xs": { "$value": "0.9375rem" },
+      "sm": { "$value": "1.0625rem" },
+      "md": { "$value": "1.125rem" },
+      "lg": { "$value": "1.25rem" },
+      "xl": { "$value": "1.5rem" },
+      "2xl": { "$value": "1.75rem" },
+      "3xl": { "$value": "2.125rem" },
+      "4xl": { "$value": "2.25rem" },
+      "5xl": { "$value": "3rem" },
+      "6xl": { "$value": "3.5rem" },
+      "7xl": { "$value": "4.5rem" }
+    }
+  }
+}

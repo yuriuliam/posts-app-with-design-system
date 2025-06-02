@@ -1,0 +1,28 @@
+// phone:sm - 375, 360
+// phone:lg - 820, 768, 430, 390
+// tablet:md - 1180, 1080, 1024
+// desktop:sm - 1366, 1280
+// desktop:lg - 1536, 1440
+// desktop:xl - 1920, 1600
+
+.root {
+  position: fixed;
+  z-index: $zIndexAboveAll;
+  inset: 0;
+
+  pointer-events: none;
+
+  & > div {
+    position: absolute;
+    inset: 0;
+    margin-inline: auto;
+    width: 100%;
+
+    @include layout-grid;
+
+    & > span {
+      background: red;
+      opacity: 0.1;
+    }
+  }
+}

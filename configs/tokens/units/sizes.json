@@ -1,0 +1,19 @@
+{
+  "size": {
+    "$type": "dimension",
+    "2xs": { "$value": "0.25rem" },
+    "xs": { "$value": "0.5rem" },
+    "sm": { "$value": "0.75rem" },
+    "md": { "$value": "1rem" },
+    "lg": { "$value": "1.25rem" },
+    "xl": { "$value": "1.5rem" },
+    "2xl": { "$value": "2rem" },
+    "3xl": { "$value": "2.5rem" },
+    "4xl": { "$value": "3rem" },
+    "5xl": { "$value": "3.5rem" },
+    "6xl": { "$value": "4rem" },
+    "7xl": { "$value": "6rem" },
+    "8xl": { "$value": "8rem" },
+    "9xl": { "$value": "16rem" }
+  }
+}

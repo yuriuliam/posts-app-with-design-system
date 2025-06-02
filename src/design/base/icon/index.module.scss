@@ -1,0 +1,78 @@
+.root {
+  --icon-intent: currentColor;
+  --icon-size: #{$sizeXl};
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  display: inherit;
+  color: var(--icon-intent);
+}
+
+.intentCurrent {
+  --icon-intent: currentColor;
+}
+
+.intentPrimary {
+  --icon-intent: #{$schemeBaseSurfaceOnPrimary};
+}
+
+.intentSecondary {
+  --icon-intent: #{$schemeBaseSurfaceOnSecondary};
+}
+
+.intentTertiary {
+  --icon-intent: #{$schemeBaseSurfaceOnTertiary};
+}
+
+.intentInfo {
+  --icon-intent: #{$schemeBaseInfoAccent};
+}
+
+.intentSuccess {
+  --icon-intent: #{$schemeBaseSuccessAccent};
+}
+
+.intentWarning {
+  --icon-intent: #{$schemeBaseWarningAccent};
+}
+
+.intentCritical {
+  --icon-intent: #{$schemeBaseCriticalAccent};
+}
+
+.sizeXs {
+  --icon-size: #{$sizeSm};
+}
+
+.sizeSm {
+  --icon-size: #{$sizeMd};
+}
+
+.sizeMd {
+  --icon-size: #{$sizeLg};
+}
+
+.sizeLg {
+  --icon-size: #{$sizeXl};
+}
+
+.sizeXl {
+  --icon-size: #{$size2Xl};
+}
+
+.size2Xl {
+  --icon-size: #{$size4Xl};
+}
+
+.size3Xl {
+  --icon-size: #{$size6Xl};
+}
+
+.size4Xl {
+  --icon-size: #{$size8Xl};
+}
+
+.size5Xl {
+  --icon-size: #{$size9Xl};
+}
