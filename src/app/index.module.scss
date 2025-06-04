@@ -2,7 +2,6 @@
   @include layout-grid;
 
   & {
-    position: relative;
     min-height: 100dvh;
     background: $schemeBaseSurfacePrimary;
     color: $schemeBaseSurfaceOnPrimary;
@@ -30,6 +29,11 @@
 
     & > p {
       max-width: 352px;
+    }
+
+    & > span {
+      display: flex;
+      gap: var(--fg-gutter);
     }
   }
 }

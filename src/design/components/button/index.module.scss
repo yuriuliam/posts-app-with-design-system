@@ -1,0 +1,184 @@
+.root {
+  --intent-enabled: #{$schemeInteractiveNeutralEnabled};
+  --intent-hovered: #{$schemeInteractiveNeutralHovered};
+  --intent-focused: #{$schemeInteractiveNeutralFocused};
+  --intent-pressed: #{$schemeInteractiveNeutralPressed};
+  --intent-ring: #{$schemeInteractiveNeutralRing};
+  --intent-label: #{$schemeInteractiveNeutralLabel};
+  --intent-accent: #{$schemeInteractiveNeutralAccent};
+  --padding: #{$spacing4} #{$spacing5};
+
+  @include link-md;
+
+  & {
+    padding: var(--padding);
+
+    display: inline-flex;
+    gap: $spacing3;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--intent-enabled);
+    border-radius: $borderRadiiMd;
+    color: var(--intent-label);
+
+    cursor: pointer;
+    transition: all $transitionDurationFast;
+  }
+
+  &:focus {
+    background-color: var(--intent-hovered);
+
+    outline: $borderWidthThick solid var(--intent-ring);
+  }
+
+  &:hover {
+    background-color: var(--intent-hovered);
+  }
+
+  &:active {
+    background-color: var(--intent-pressed);
+  }
+
+  &:disabled {
+    background-color: var(--intent-enabled);
+
+    opacity: $opacityDisabled;
+    cursor: not-allowed;
+  }
+}
+
+.sizeSm {
+  --padding: #{$spacing3} #{$spacing4};
+
+  @include link-xs;
+  
+  & > svg:only-child {
+    --padding: #{$spacing3};
+  }
+}
+
+.sizeMd {
+  --padding: #{$spacing4} #{$spacing5};
+
+  @include link-sm;
+  
+  & > svg:only-child {
+    --padding: #{$spacing4};
+  }
+}
+
+.sizeLg {
+  --padding: #{$spacing5} #{$spacing7};
+
+  @include link-sm;
+  
+  & > svg:only-child {
+    --padding: #{$spacing5};
+  }
+}
+
+.sizeXl {
+  --padding: #{$spacing6} #{$spacing7};
+
+  @include link-md;
+  
+  & > svg:only-child {
+    --padding: #{$spacing6};
+  }
+}
+
+.justifyTrue {
+  width: 100%;
+
+  justify-content: space-between;
+}
+
+.intentNeutral {
+  --intent-enabled: #{$schemeInteractiveNeutralEnabled};
+  --intent-hovered: #{$schemeInteractiveNeutralHovered};
+  --intent-focused: #{$schemeInteractiveNeutralFocused};
+  --intent-pressed: #{$schemeInteractiveNeutralPressed};
+  --intent-ring: #{$schemeInteractiveNeutralRing};
+  --intent-label: #{$schemeInteractiveNeutralLabel};
+  --intent-accent: #{$schemeInteractiveNeutralAccent};
+}
+
+.intentBrand {
+  --intent-enabled: #{$schemeInteractiveBrandEnabled};
+  --intent-hovered: #{$schemeInteractiveBrandHovered};
+  --intent-focused: #{$schemeInteractiveBrandFocused};
+  --intent-pressed: #{$schemeInteractiveBrandPressed};
+  --intent-ring: #{$schemeInteractiveBrandRing};
+  --intent-label: #{$schemeInteractiveBrandLabel};
+  --intent-accent: #{$schemeInteractiveBrandAccent};
+}
+
+.intentInfo {
+  --intent-enabled: #{$schemeInteractiveInfoEnabled};
+  --intent-hovered: #{$schemeInteractiveInfoHovered};
+  --intent-focused: #{$schemeInteractiveInfoFocused};
+  --intent-pressed: #{$schemeInteractiveInfoPressed};
+  --intent-ring: #{$schemeInteractiveInfoRing};
+  --intent-label: #{$schemeInteractiveInfoLabel};
+  --intent-accent: #{$schemeInteractiveInfoAccent};
+}
+
+.intentSuccess {
+  --intent-enabled: #{$schemeInteractiveSuccessEnabled};
+  --intent-hovered: #{$schemeInteractiveSuccessHovered};
+  --intent-focused: #{$schemeInteractiveSuccessFocused};
+  --intent-pressed: #{$schemeInteractiveSuccessPressed};
+  --intent-ring: #{$schemeInteractiveSuccessRing};
+  --intent-label: #{$schemeInteractiveSuccessLabel};
+  --intent-accent: #{$schemeInteractiveSuccessAccent};
+}
+
+.intentWarning {
+  --intent-enabled: #{$schemeInteractiveWarningEnabled};
+  --intent-hovered: #{$schemeInteractiveWarningHovered};
+  --intent-focused: #{$schemeInteractiveWarningFocused};
+  --intent-pressed: #{$schemeInteractiveWarningPressed};
+  --intent-ring: #{$schemeInteractiveWarningRing};
+  --intent-label: #{$schemeInteractiveWarningLabel};
+  --intent-accent: #{$schemeInteractiveWarningAccent};
+}
+
+.intentCritical {
+  --intent-enabled: #{$schemeInteractiveCriticalEnabled};
+  --intent-hovered: #{$schemeInteractiveCriticalHovered};
+  --intent-focused: #{$schemeInteractiveCriticalFocused};
+  --intent-pressed: #{$schemeInteractiveCriticalPressed};
+  --intent-ring: #{$schemeInteractiveCriticalRing};
+  --intent-label: #{$schemeInteractiveCriticalLabel};
+  --intent-accent: #{$schemeInteractiveCriticalAccent};
+}
+
+.intentSecondary {
+  --intent-enabled: #{$schemeInteractiveSecondaryEnabled};
+  --intent-hovered: #{$schemeInteractiveSecondaryHovered};
+  --intent-focused: #{$schemeInteractiveSecondaryFocused};
+  --intent-pressed: #{$schemeInteractiveSecondaryPressed};
+  --intent-ring: #{$schemeInteractiveSecondaryRing};
+  --intent-label: #{$schemeInteractiveSecondaryLabel};
+  --intent-accent: #{$schemeInteractiveSecondaryAccent};
+}
+
+.intentTertiary {
+  --intent-enabled: #{$schemeInteractiveTertiaryEnabled};
+  --intent-hovered: #{$schemeInteractiveTertiaryHovered};
+  --intent-focused: #{$schemeInteractiveTertiaryFocused};
+  --intent-pressed: #{$schemeInteractiveTertiaryPressed};
+  --intent-ring: #{$schemeInteractiveTertiaryRing};
+  --intent-label: #{$schemeInteractiveTertiaryLabel};
+  --intent-accent: #{$schemeInteractiveTertiaryAccent};
+
+  background-color: transparent;
+  outline: $borderWidthThin solid var(--intent-enabled);
+
+  &:focus {
+    background-color: transparent;
+
+    outline: $borderWidthThick solid var(--intent-ring);
+  }
+}

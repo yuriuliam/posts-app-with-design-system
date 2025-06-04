@@ -1,0 +1,15 @@
+.authLayout {
+  @include layout-grid;
+
+  & {
+    width: 100%;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: $schemeBaseSurfacePrimary;
+    color: $schemeBaseSurfaceOnPrimary;
+  }
+}

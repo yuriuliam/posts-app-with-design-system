@@ -6,8 +6,9 @@
  * TL;DR - This is where all the tRPC server stuff is created and plugged in. The pieces you will
  * need to use are documented accordingly near the end.
  */
-import { initTRPC } from '@trpc/server'
+import { initTRPC, TRPCError } from '@trpc/server'
 
+import { auth, currentUser } from '@clerk/nextjs/server'
 import superjson from 'superjson'
 import { ZodError } from 'zod'
 
@@ -26,7 +27,9 @@ import { db } from '~/server/db'
  * @see https://trpc.io/docs/server/context
  */
 export const createTRPCContext = async (opts: { headers: Headers }) => {
-  return { db, ...opts }
+  const [session, user] = await Promise.all([auth(), currentUser()])
+
+  return { db, session, user, ...opts }
 }
 
 /**
@@ -102,3 +105,24 @@ const timingMiddleware = t.middleware(async ({ next, path }) => {
  * are logged in.
  */
 export const publicProcedure = t.procedure.use(timingMiddleware)
+
+/**
+ * Protected (authenticated) procedure
+ *
+ * If you want a query or mutation to ONLY be accessible to logged in users, use
+ * this. It verifies the session is valid and guarantees `ctx.session.user` is
+ * not null.
+ *
+ * @see https://trpc.io/docs/procedures
+ */
+export const protectedProcedure = t.procedure
+  .use(timingMiddleware)
+  .use(async ({ ctx, next }) => {
+    if (!ctx.session.userId) {
+      throw new TRPCError({ code: 'UNAUTHORIZED' })
+    }
+
+    return await next({
+      ctx: { session: ctx.session, user: ctx.user! },
+    })
+  })

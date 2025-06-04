@@ -18,6 +18,7 @@ const link = cva(styles.root, {
       xs: styles.sizeXs,
     },
   },
+  defaultVariants: { size: 'md' },
 })
 
 const AnchorLink = forwardRef<
@@ -33,6 +34,7 @@ const StyledNextLink: React.FC<
 > = ({ className, size, ...props }) => (
   <NextLink {...props} className={link({ className, size })} />
 )
+StyledNextLink.displayName = definePortfolioDisplayName('Link.Next')
 
 const Link = Object.freeze({
   Anchor: AnchorLink,

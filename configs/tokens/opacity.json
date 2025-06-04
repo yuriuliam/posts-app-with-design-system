@@ -1,6 +1,6 @@
 {
   "opacity": {
-    "disabled": { "$value": "0.8" },
+    "disabled": { "$value": "0.5" },
     "invisible": { "$value": "0" },
     "none": { "$value": "1" }
   }

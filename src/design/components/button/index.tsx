@@ -1,0 +1,46 @@
+import React from 'react'
+
+import { cva, type VariantProps } from 'class-variance-authority'
+
+import { definePortfolioDisplayName } from '~/shared/helpers/displayName'
+
+import styles from './index.module.scss'
+
+type ButtonProps = React.ComponentProps<'button'> & VariantProps<typeof button>
+
+const button = cva(styles.root, {
+  variants: {
+    intent: {
+      neutral: styles.intentNeutral,
+      brand: styles.intentBrand,
+      info: styles.intentInfo,
+      success: styles.intentSuccess,
+      warning: styles.intentWarning,
+      critical: styles.intentCritical,
+      secondary: styles.intentSecondary,
+      tertiary: styles.intentTertiary,
+    },
+    justified: { true: styles.justifyTrue },
+    size: {
+      sm: styles.sizeSm,
+      md: styles.sizeMd,
+      lg: styles.sizeLg,
+      xl: styles.sizeXl,
+    },
+  },
+  defaultVariants: { intent: 'neutral', justified: false, size: 'md' },
+})
+
+const Button = React.forwardRef<React.ComponentRef<'button'>, ButtonProps>(
+  ({ children, className, intent, justified, size, ...props }) => (
+    <button
+      {...props}
+      className={button({ className, intent, justified, size })}
+    >
+      {children}
+    </button>
+  ),
+)
+Button.displayName = definePortfolioDisplayName('Button')
+
+export { Button }

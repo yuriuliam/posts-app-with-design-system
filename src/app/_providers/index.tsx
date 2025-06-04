@@ -1,7 +1,11 @@
+import { ClerkProvider } from '@clerk/nextjs'
+
 import { TRPCReactProvider } from '~/trpc/react'
 
 const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <TRPCReactProvider>{children}</TRPCReactProvider>
+  <ClerkProvider>
+    <TRPCReactProvider>{children}</TRPCReactProvider>
+  </ClerkProvider>
 )
 AppProvider.displayName = 'App.Provider'
 
