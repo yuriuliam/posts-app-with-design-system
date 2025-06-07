@@ -10,21 +10,15 @@ import { posts } from '~/server/db/schema'
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
-    .query(({ input }) => {
-      return {
-        greeting: `Hello ${input.text}`,
-      }
-    }),
+    .query(({ input }) => ({ greeting: `Hello ${input.text}` })),
 
   create: protectedProcedure
     .input(z.object({ name: z.string().min(1) }))
     .mutation(async ({ ctx, input }) => {
-      const post = await ctx.db
-        .insert(posts)
-        .values({ name: input.name, createdById: ctx.user.id })
-        .returning()
-
-      return post.at(0)
+      await ctx.db.insert(posts).values({
+        name: input.name,
+        createdById: ctx.auth.userId,
+      })
     }),
 
   getLatest: protectedProcedure.query(async ({ ctx }) => {

@@ -32,10 +32,11 @@ const button = cva(styles.root, {
 })
 
 const Button = React.forwardRef<React.ComponentRef<'button'>, ButtonProps>(
-  ({ children, className, intent, justified, size, ...props }) => (
+  ({ children, className, intent, justified, size, ...props }, ref) => (
     <button
       {...props}
       className={button({ className, intent, justified, size })}
+      ref={ref}
     >
       {children}
     </button>

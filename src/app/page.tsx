@@ -1,3 +1,5 @@
+import React from 'react'
+
 import {
   SignedIn,
   SignedOut,
@@ -6,13 +8,21 @@ import {
   UserButton,
 } from '@clerk/nextjs'
 
-import { Button } from '~/design/components/button'
+import { auth } from '@clerk/nextjs/server'
 
+import { Button } from '~/design/components/button'
+import { api } from '~/trpc/server'
+
+import { Posts } from './_components/posts'
 import styles from './index.module.scss'
 
 import appConfig from '#/app.json' assert { type: 'json' }
 
 const Home: React.FC = async () => {
+  const session = await auth()
+
+  if (session.userId) void api.post.getLatest.prefetch()
+
   return (
     <>
       <header className={styles.header}>
@@ -35,6 +45,10 @@ const Home: React.FC = async () => {
               <UserButton />
             </SignedIn>
           </span>
+
+          <SignedIn>
+            <Posts />
+          </SignedIn>
         </section>
       </header>
     </>
