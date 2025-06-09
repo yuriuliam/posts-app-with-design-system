@@ -1,0 +1,19 @@
+.signUpStart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing4;
+
+  grid-column: 3 / 11;
+  
+  @include media-tablet-md {
+    grid-column: 5 / 9;
+  }
+
+  & > div {
+    width: 100%;
+
+    display: flex;
+    gap: $spacing4;
+  }
+}

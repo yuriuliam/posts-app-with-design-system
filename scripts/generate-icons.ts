@@ -49,6 +49,8 @@ const constants = Object.freeze({
 })
 
 const htmlStylePropRegExp = /style="([^"]*)"/g
+const htmlElementClipPropRegExp = /clip-([^\s]*)/g
+const htmlElementFillPropRegExp = /fill-([^\s]*)/g
 const htmlElementStrokePropRegExp = /stroke-([^\s]*)/g
 
 const createIconContent = defineTemplate<{
@@ -205,6 +207,14 @@ function parseSVGImageToIconVFile(svgImageData: SVGImageData) {
     .replace(
       htmlStylePropRegExp,
       `style={${JSON.stringify(svg.maskProps.shift())}}`,
+    )
+    .replace(
+      htmlElementClipPropRegExp,
+      (_, propSuffix) => `clip${capitalize(propSuffix)}`,
+    )
+    .replace(
+      htmlElementFillPropRegExp,
+      (_, propSuffix) => `fill${capitalize(propSuffix)}`,
     )
     .replace(
       htmlElementStrokePropRegExp,

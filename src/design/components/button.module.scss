@@ -6,7 +6,7 @@
   --intent-ring: #{$schemeInteractiveNeutralRing};
   --intent-label: #{$schemeInteractiveNeutralLabel};
   --intent-accent: #{$schemeInteractiveNeutralAccent};
-  --padding: #{$spacing4} #{$spacing5};
+  --padding: #{$spacing5} #{$spacing6};
 
   @include link-md;
 
@@ -49,7 +49,7 @@
 }
 
 .sizeSm {
-  --padding: #{$spacing3} #{$spacing4};
+  --padding: #{$spacing3} #{$spacing5};
 
   @include link-xs;
   
@@ -59,17 +59,7 @@
 }
 
 .sizeMd {
-  --padding: #{$spacing4} #{$spacing5};
-
-  @include link-sm;
-  
-  & > svg:only-child {
-    --padding: #{$spacing4};
-  }
-}
-
-.sizeLg {
-  --padding: #{$spacing5} #{$spacing7};
+  --padding: #{$spacing5} #{$spacing6};
 
   @include link-sm;
   
@@ -78,13 +68,23 @@
   }
 }
 
+.sizeLg {
+  --padding: #{$spacing6} #{$spacing8};
+
+  @include link-sm;
+  
+  & > svg:only-child {
+    --padding: #{$spacing6};
+  }
+}
+
 .sizeXl {
-  --padding: #{$spacing6} #{$spacing7};
+  --padding: #{$spacing7} #{$spacing8};
 
   @include link-md;
   
   & > svg:only-child {
-    --padding: #{$spacing6};
+    --padding: #{$spacing7};
   }
 }
 
@@ -92,6 +92,12 @@
   width: 100%;
 
   justify-content: space-between;
+}
+
+.centerTrue {
+  width: 100%;
+
+  justify-content: center;
 }
 
 .intentNeutral {

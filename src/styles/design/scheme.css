@@ -329,7 +329,7 @@
   --scheme-interactive-input-ring: var(--scheme-dynamic-darken-200);
   --scheme-interactive-input-label: var(--scheme-foundation-neutral-900);
   --scheme-interactive-input-accent: var(--scheme-foundation-neutral-500);
-  --scheme-interactive-input-placeholder: var(--scheme-foundation-neutral-900);
+  --scheme-interactive-input-placeholder: var(--scheme-foundation-neutral-500);
   --scheme-interactive-input-helper: var(--scheme-foundation-neutral-600);
   --scheme-interactive-input-border: var(--scheme-foundation-neutral-300);
   --scheme-interactive-input-border-focused: var(--scheme-foundation-neutral-1000);

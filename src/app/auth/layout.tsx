@@ -1,7 +1,7 @@
-import styles from './index.module.scss'
+import styles from './layout.module.scss'
 
 const AuthLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
-  return <main className={styles.authLayout}>{children}</main>
+  return <main className={styles.root}>{children}</main>
 }
 
 export default AuthLayout

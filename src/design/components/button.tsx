@@ -4,12 +4,13 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { definePortfolioDisplayName } from '~/shared/helpers/displayName'
 
-import styles from './index.module.scss'
+import styles from './button.module.scss'
 
 type ButtonProps = React.ComponentProps<'button'> & VariantProps<typeof button>
 
 const button = cva(styles.root, {
   variants: {
+    centered: { true: styles.centerTrue },
     intent: {
       neutral: styles.intentNeutral,
       brand: styles.intentBrand,
@@ -32,10 +33,13 @@ const button = cva(styles.root, {
 })
 
 const Button = React.forwardRef<React.ComponentRef<'button'>, ButtonProps>(
-  ({ children, className, intent, justified, size, ...props }, ref) => (
+  (
+    { children, className, centered, intent, justified, size, ...props },
+    ref,
+  ) => (
     <button
       {...props}
-      className={button({ className, intent, justified, size })}
+      className={button({ className, centered, intent, justified, size })}
       ref={ref}
     >
       {children}

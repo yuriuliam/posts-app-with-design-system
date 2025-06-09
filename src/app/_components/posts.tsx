@@ -4,10 +4,11 @@ import React from 'react'
 import { Button } from '~/design/components/button'
 import { api } from '~/trpc/react'
 
-import styles from '../index.module.scss'
+import styles from '../page.module.scss'
 
 export const Posts: React.FC = () => {
-  const [latestPost] = api.post.getLatest.useSuspenseQuery()
+  // Can't use "useSuspenseQuery"
+  const { data: latestPost, isLoading } = api.post.getLatest.useQuery()
 
   const [name, setName] = React.useState('')
 
@@ -41,7 +42,9 @@ export const Posts: React.FC = () => {
       {latestPost ? (
         <p>Your most recent post: {latestPost.name}</p>
       ) : (
-        <p>You have no posts yet.</p>
+        <>
+          {isLoading ? <p>Fetching posts...</p> : <p>You have no posts yet.</p>}
+        </>
       )}
     </div>
   )

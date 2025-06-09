@@ -5,7 +5,7 @@ import NextLink from 'next/link'
 
 import { definePortfolioDisplayName } from '~/shared/helpers/displayName'
 
-import styles from './index.module.scss'
+import styles from './link.module.scss'
 
 type LinkVariantProps = VariantProps<typeof link>
 
@@ -41,4 +41,4 @@ const Link = Object.freeze({
   Next: StyledNextLink,
 })
 
-export { Link }
+export { Link, link }

@@ -83,7 +83,7 @@
           "ring": { "$value": "{scheme.dynamic.light.darken.200}" },
           "label": { "$value": "{scheme.foundation.light.neutral.900}" },
           "accent": { "$value": "{scheme.foundation.light.neutral.500}" },
-          "placeholder": { "$value": "{scheme.foundation.light.neutral.900}" },
+          "placeholder": { "$value": "{scheme.foundation.light.neutral.500}" },
           "helper": { "$value": "{scheme.foundation.light.neutral.600}" },
           "border": { "$value": "{scheme.foundation.light.neutral.300}" },
           "borderFocused": { "$value": "{scheme.foundation.light.neutral.1000}" }

@@ -1,0 +1,40 @@
+.root {
+  @include display-xl;
+
+  &[data-bold] {
+    @include display-xl-bold;
+  }
+}
+
+.sizeXl {
+  @include display-xl;
+
+  &[data-bold] {
+    @include display-xl-bold;
+  }
+}
+
+.sizeLg {
+  @include display-lg;
+
+  &[data-bold] {
+    @include display-lg-bold;
+  }
+}
+
+.sizeMd {
+  @include display-md;
+
+  &[data-bold] {
+    @include display-md-bold;
+  }
+}
+
+.sizeSm {
+  @include display-sm;
+
+  &[data-bold] {
+    @include display-sm-bold;
+  }
+}
+
