@@ -1,0 +1,59 @@
+.root {
+  --7d: #{$schemeInteractiveInputEnabled};
+  --intent-hovered: #{$schemeInteractiveInputHovered};
+  --intent-focused: #{$schemeInteractiveInputFocused};
+  --intent-pressed: #{$schemeInteractiveInputPressed};
+  --intent-ring: #{$schemeInteractiveInputRing};
+  --intent-label: #{$schemeInteractiveInputLabel};
+  --intent-accent: #{$schemeInteractiveInputAccent};
+  --intent-placeholder: #{$schemeInteractiveInputPlaceholder};
+  --intent-helper: #{$schemeInteractiveInputHelper};
+  --intent-border: #{$schemeInteractiveInputBorder};
+  --intent-border-focused: #{$schemeInteractiveInputBorderFocused};
+
+  @include body-sm;
+
+  & {
+    position: relative;
+    padding: $spacing5 $spacing7;
+
+    width: 100%;
+
+    display: flex;
+
+    background-color: var(--intent-enabled);
+    outline: $borderWidthThin solid var(--intent-border);
+  }
+
+  & > span {
+    display: flex;
+    flex-direction: column;
+
+    & > label {
+      color: var(--intent-placeholder);
+    }
+
+    & > input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      padding: $spacing7 $spacing7 $spacing2;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: transparent;
+      color: var(--intent-label);
+      outline: unset;
+
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    & > span {
+      all: unset;
+    }
+  }
+}

@@ -24,5 +24,10 @@
   @include media-desktop-md {
     --fg-margin: 112px;
     --fg-gutter: 24px;
+
+    &[data-sidebar] {
+      --fg-margin: 32px;
+      --fg-gutter: 16px;
+    }
   }
 }

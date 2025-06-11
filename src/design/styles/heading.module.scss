@@ -1,11 +1,3 @@
-.root {
-  @include display-xl;
-
-  &[data-bold] {
-    @include display-xl-bold;
-  }
-}
-
 .sizeXl {
   @include display-xl;
 

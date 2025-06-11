@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import React from 'react'
 
 import { cva, type VariantProps } from 'class-variance-authority'
 import NextLink from 'next/link'
@@ -21,7 +21,7 @@ const link = cva(styles.root, {
   defaultVariants: { size: 'md' },
 })
 
-const AnchorLink = forwardRef<
+const AnchorLink = React.forwardRef<
   React.ComponentRef<'a'>,
   React.ComponentProps<'a'> & LinkVariantProps
 >(({ className, size, ...props }, ref) => (
@@ -41,4 +41,4 @@ const Link = Object.freeze({
   Next: StyledNextLink,
 })
 
-export { Link, link }
+export { Link }
