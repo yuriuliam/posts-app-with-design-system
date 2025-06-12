@@ -4,7 +4,7 @@ import React from 'react'
 import { Button } from '~/design/components/button'
 import { api } from '~/trpc/react'
 
-import styles from '../page.module.scss'
+import styles from './posts.module.scss'
 
 export const Posts: React.FC = () => {
   // Can't use "useSuspenseQuery"

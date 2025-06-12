@@ -5,11 +5,12 @@ import '~/styles/reset.css'
 
 import '~/styles/base.scss'
 
+import { ClerkProvider } from '@clerk/nextjs'
+
 import { LayoutGrid } from '~/design/tools/layout-grid'
 import { env } from '~/env'
 import { nextFontFaceClassNames } from '~/styles/fonts'
-
-import { AppProvider } from './_providers'
+import { TRPCReactProvider } from '~/trpc/react'
 
 import appConfig from '#/app.json' assert { type: 'json' }
 
@@ -20,14 +21,14 @@ export const metadata = {
 }
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
-  <AppProvider>
+  <ClerkProvider>
     <html className={nextFontFaceClassNames} lang="en" dir="ltr">
       <body>
-        {children}
+        <TRPCReactProvider>{children}</TRPCReactProvider>
         {env.NODE_ENV === 'development' && <LayoutGrid />}
       </body>
     </html>
-  </AppProvider>
+  </ClerkProvider>
 )
 
 export default RootLayout

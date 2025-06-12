@@ -10,8 +10,8 @@ import {
 
 import { Button } from '~/design/components/button'
 
-import { Posts } from './_components/posts'
 import styles from './page.module.scss'
+import { Posts } from '../_components/posts'
 
 import appConfig from '#/app.json' assert { type: 'json' }
 
