@@ -29,7 +29,12 @@ const button = cva(styles.root, {
       xl: styles.sizeXl,
     },
   },
-  defaultVariants: { intent: 'neutral', justified: false, size: 'md' },
+  defaultVariants: {
+    centered: false,
+    intent: 'neutral',
+    justified: false,
+    size: 'md',
+  },
 })
 
 const Button = React.forwardRef<React.ComponentRef<'button'>, ButtonProps>(

@@ -110,6 +110,7 @@ const configs = Object.freeze({
           'warn',
           { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
         ],
+        '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/require-await': 'off',
         '@typescript-eslint/no-misused-promises': [
           'error',

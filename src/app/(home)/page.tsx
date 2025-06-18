@@ -13,15 +13,13 @@ import { Button } from '~/design/components/button'
 import styles from './page.module.scss'
 import { Posts } from '../_components/posts'
 
-import appConfig from '#/app.json' assert { type: 'json' }
-
 const Home: React.FC = async () => {
   return (
     <>
       <header className={styles.root}>
         <section>
-          <h1 data-bold>{appConfig.shortName}</h1>
-          <p>{appConfig.description}</p>
+          <h1 data-bold>Posts App</h1>
+          <p>Welcome to your app!</p>
 
           <span>
             <SignedOut>

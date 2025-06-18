@@ -1,13 +1,11 @@
 .root {
+  width: 100%;
+  height: 100dvh;
+
+  align-items: center;
+  
+  background: $schemeBaseSurfacePrimary;
+  color: $schemeBaseSurfaceOnPrimary;
+  
   @include layout-grid;
-
-  & {
-    width: 100%;
-    height: 100dvh;
-
-    align-items: center;
-    
-    background: $schemeBaseSurfacePrimary;
-    color: $schemeBaseSurfaceOnPrimary;
-  }
 }

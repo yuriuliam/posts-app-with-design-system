@@ -64,6 +64,7 @@ const portfolioScssDestinations = Object.freeze({
   borderVariables: 'design/variables/_border.scss',
   breakpointVariables: 'design/variables/_breakpoints.scss',
   colorVariables: 'design/variables/_colors.scss',
+  fontVariables: 'design/variables/_fonts.scss',
   opacityVariables: 'design/variables/_opacity.scss',
   sizeVariables: 'design/variables/_sizes.scss',
   spacingVariables: 'design/variables/_spacing.scss',
@@ -538,6 +539,12 @@ async function getStyleDictionary() {
             destination: portfolioScssDestinations.colorVariables,
             format: portfolioFormats.scssVariables,
             filter: { attributes: { category: 'color' } },
+            options: { outputReferences: true },
+          },
+          {
+            destination: portfolioScssDestinations.fontVariables,
+            format: portfolioFormats.scssVariables,
+            filter: { attributes: { category: 'font' } },
             options: { outputReferences: true },
           },
           {

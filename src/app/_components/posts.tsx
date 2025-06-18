@@ -2,6 +2,7 @@
 import React from 'react'
 
 import { Button } from '~/design/components/button'
+import { Input } from '~/design/components/input'
 import { api } from '~/trpc/react'
 
 import styles from './posts.module.scss'
@@ -28,10 +29,12 @@ export const Posts: React.FC = () => {
           createPost.mutate({ name })
         }}
       >
-        <input
+        <Input
+          label="Post"
           name="post"
+          size="lg"
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={evt => setName(evt.target.value)}
         />
 
         <Button size="sm" type="submit" disabled={createPost.isPending}>

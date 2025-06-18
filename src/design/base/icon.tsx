@@ -8,7 +8,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { definePortfolioDisplayName } from '~/shared/helpers/displayName'
 
-import styles from './index.module.scss'
+import styles from './icon.module.scss'
 
 type IconRef = React.ComponentRef<'svg'>
 

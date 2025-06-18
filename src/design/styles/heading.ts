@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority'
 
 import styles from './heading.module.scss'
 
-export const heading = cva(undefined, {
+const heading = cva(undefined, {
   variants: {
     size: {
       xl: styles.sizeXl,
@@ -14,3 +14,5 @@ export const heading = cva(undefined, {
 
   defaultVariants: { size: 'xl' },
 })
+
+export { heading }

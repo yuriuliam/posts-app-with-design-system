@@ -7,23 +7,26 @@
   --intent-label: #{$schemeInteractiveNeutralLabel};
   --intent-accent: #{$schemeInteractiveNeutralAccent};
   --padding: #{$spacing5} #{$spacing6};
+  --padding-icon-only: #{$spacing5};
+  
+  padding: var(--padding);
+
+  display: inline-flex;
+  gap: $spacing3;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--intent-enabled);
+  border-radius: $borderRadiiMd;
+  color: var(--intent-label);
+
+  cursor: pointer;
+  transition: all $transitionDurationFast;
 
   @include link-md;
 
-  & {
-    padding: var(--padding);
-
-    display: inline-flex;
-    gap: $spacing3;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--intent-enabled);
-    border-radius: $borderRadiiMd;
-    color: var(--intent-label);
-
-    cursor: pointer;
-    transition: all $transitionDurationFast;
+  & > svg:only-child {
+    padding: var(--padding-icon-only);
   }
 
   &:focus {
@@ -50,42 +53,30 @@
 
 .sizeSm {
   --padding: #{$spacing3} #{$spacing5};
+  --padding-icon-only: #{$spacing3};
 
   @include link-xs;
-  
-  & > svg:only-child {
-    --padding: #{$spacing3};
-  }
 }
 
 .sizeMd {
   --padding: #{$spacing5} #{$spacing6};
+  --padding-icon-only: #{$spacing5};
 
   @include link-sm;
-  
-  & > svg:only-child {
-    --padding: #{$spacing5};
-  }
 }
 
 .sizeLg {
   --padding: #{$spacing6} #{$spacing8};
+  --padding-icon-only: #{$spacing6};
 
   @include link-sm;
-  
-  & > svg:only-child {
-    --padding: #{$spacing6};
-  }
 }
 
 .sizeXl {
   --padding: #{$spacing7} #{$spacing8};
+  --padding-icon-only: #{$spacing7};
 
   @include link-md;
-  
-  & > svg:only-child {
-    --padding: #{$spacing7};
-  }
 }
 
 .justifyTrue {

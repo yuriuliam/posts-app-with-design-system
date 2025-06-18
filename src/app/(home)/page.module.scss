@@ -1,11 +1,9 @@
 .root {
-  @include layout-grid;
+  min-height: 100dvh;
+  background: $schemeBaseSurfacePrimary;
+  color: $schemeBaseSurfaceOnPrimary;
 
-  & {
-    min-height: 100dvh;
-    background: $schemeBaseSurfacePrimary;
-    color: $schemeBaseSurfaceOnPrimary;
-  }
+  @include layout-grid;
 
   & > section {
     display: flex;
