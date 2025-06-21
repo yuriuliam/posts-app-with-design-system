@@ -12,14 +12,7 @@ type SupportedInputTypes = Extract<
   'email' | 'password' | 'search' | 'tel' | 'text' | 'url'
 >
 
-type InputFieldVariantProps = VariantProps<typeof field> &
-  VariantProps<typeof label>
-
-const label = cva(styles.label, {
-  variants: {
-    minimizeLabel: { true: styles.minimalLabel, false: styles.maximumLabel },
-  },
-})
+type InputFieldVariantProps = VariantProps<typeof field>
 
 const field = cva(styles.root, {
   variants: {
@@ -44,11 +37,11 @@ FieldRootSlot.displayName = definePortfolioDisplayName('Field.Root')
 
 const FieldLabelSlot = React.forwardRef<
   React.ComponentRef<typeof ArkField.Label>,
-  ArkField.LabelProps & VariantProps<typeof label>
->(({ children, className, minimizeLabel, ...props }, forwardedRef) => (
+  ArkField.LabelProps
+>(({ children, className, ...props }, forwardedRef) => (
   <ArkField.Label
     {...props}
-    className={label({ className, minimizeLabel })}
+    className={cx(styles.label, className)}
     ref={forwardedRef}
   >
     {children}

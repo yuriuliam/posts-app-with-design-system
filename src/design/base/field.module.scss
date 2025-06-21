@@ -49,11 +49,10 @@
   & > [data-slot="input-wrapper"] {
     position: relative;
     width: 100%;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
   }
   
   &.sizeLg {
@@ -68,9 +67,11 @@
 }
 
 .label {
+  position: absolute;
+  inset: 0;
   color: var(--intent-placeholder);
   
-  &.minimalLabel {
+  &[data-shrink=true] {
     min-height: $size2Xl;
     transform: translateY(-6px);
     animation: $transitionDurationMedium labelIn ease;
@@ -78,16 +79,12 @@
     @include body-xs;
   }
 
-  &.maximumLabel {
+  &[data-shrink=false] {
     animation: $transitionDurationMedium labelOut ease;
   }
 }
 
 .input {
-  position: absolute;
-  bottom: calc($spacing1 * -1);
-  left: 0;
-
   width: 100%;
 
   background-color: transparent;

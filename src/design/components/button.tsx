@@ -45,6 +45,7 @@ const Button = React.forwardRef<React.ComponentRef<'button'>, ButtonProps>(
     <button
       {...props}
       className={button({ className, centered, intent, justified, size })}
+      data-single={React.Children.count(children) === 1}
       ref={ref}
     >
       {children}

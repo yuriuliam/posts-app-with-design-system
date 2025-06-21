@@ -3,6 +3,8 @@ import '~/styles/design/variables.css'
 import '~/styles/reset.css'
 import '~/styles/base.scss'
 
+import type { Metadata, Viewport } from 'next'
+
 import { ClerkProvider } from '@clerk/nextjs'
 
 import { LayoutGridColumns } from '~/design/tools/layout-grid-columns'
@@ -16,7 +18,12 @@ export const metadata = {
   title: { default: appConfig.name.default, template: appConfig.name.template },
   description: appConfig.description,
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
-}
+} satisfies Metadata
+
+export const viewport = {
+  initialScale: 1,
+  width: 'device-width',
+} satisfies Viewport
 
 const RootLayout: React.FC<React.PropsWithChildren> = ({ children }) => (
   <ClerkProvider>

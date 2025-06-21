@@ -25,7 +25,7 @@
 
   @include link-md;
 
-  & > svg:only-child {
+  &[data-single=true]:has(> svg) {
     padding: var(--padding-icon-only);
   }
 

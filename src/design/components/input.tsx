@@ -1,4 +1,5 @@
 'use client'
+'use memo'
 import React from 'react'
 
 import { isUndefined } from 'es-toolkit'
@@ -18,21 +19,20 @@ type InputProps = React.ComponentProps<typeof Field.Input> &
 const Input = React.forwardRef<
   React.ComponentRef<typeof Field.Input>,
   InputProps
->(({ containerRef, id, label, size, ...props }, forwardedRef) => {
+>(({ containerRef, id, label, size, ...inputProps }, forwardedRef) => {
   const internalInputRef = React.useRef<HTMLInputElement>(null)
 
   const internalInputId = React.useId()
   const inputId = id ?? internalInputId
 
-  const [isFocused, setIsFocused] = React.useState<boolean | undefined>(
-    undefined,
-  )
-  const [hasValue, setHasValue] = React.useState<boolean | undefined>(undefined)
+  const [isFocused, setIsFocused] = React.useState<boolean | undefined>()
+  const [hasValue, setHasValue] = React.useState<boolean | undefined>()
 
-  const shouldMinimizeLabel =
-    isUndefined(hasValue) && isUndefined(isFocused)
+  const focusState = React.useDeferredValue(isFocused)
+  const shrinkState =
+    isUndefined(focusState) && isUndefined(hasValue)
       ? undefined
-      : hasValue || isFocused
+      : !!(focusState || hasValue)
 
   return (
     <Field.Root
@@ -66,25 +66,25 @@ const Input = React.forwardRef<
       <span data-slot="input-wrapper">
         <Field.Label
           aria-label={label}
+          data-shrink={shrinkState}
           htmlFor={inputId}
-          minimizeLabel={shouldMinimizeLabel}
         >
           {label}
         </Field.Label>
 
         <Field.Input
-          {...props}
+          {...inputProps}
           id={inputId}
           onBlur={composeEventHandlers(
-            props.onBlur,
+            inputProps.onBlur,
             () => void setIsFocused(false),
           )}
           onChange={composeEventHandlers(
-            props.onChange,
+            inputProps.onChange,
             evt => void setHasValue(!!evt.target.value),
           )}
           onFocus={composeEventHandlers(
-            props.onFocus,
+            inputProps.onFocus,
             () => void setIsFocused(true),
           )}
           ref={composeRefs(internalInputRef, forwardedRef)}
