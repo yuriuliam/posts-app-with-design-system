@@ -8,14 +8,21 @@ import {
   UserButton,
 } from '@clerk/nextjs'
 
+import { auth } from '@clerk/nextjs/server'
+
 import { Button } from '~/design/components/button'
+import { api, HydrateClient } from '~/trpc/server'
 
 import styles from './page.module.scss'
 import { Posts } from '../_components/posts'
 
 const Home: React.FC = async () => {
+  const session = await auth()
+
+  if (session.userId) void api.post.getLatest.prefetch()
+
   return (
-    <>
+    <HydrateClient>
       <header className={styles.root}>
         <section>
           <h1 data-bold>Posts App</h1>
@@ -42,7 +49,7 @@ const Home: React.FC = async () => {
           </SignedIn>
         </section>
       </header>
-    </>
+    </HydrateClient>
   )
 }
 

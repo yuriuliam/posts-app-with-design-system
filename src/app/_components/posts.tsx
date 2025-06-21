@@ -8,8 +8,7 @@ import { api } from '~/trpc/react'
 import styles from './posts.module.scss'
 
 export const Posts: React.FC = () => {
-  // Can't use "useSuspenseQuery"
-  const { data: latestPost, isLoading } = api.post.getLatest.useQuery()
+  const [latestPost] = api.post.getLatest.useSuspenseQuery()
 
   const [name, setName] = React.useState('')
 
@@ -45,9 +44,7 @@ export const Posts: React.FC = () => {
       {latestPost ? (
         <p>Your most recent post: {latestPost.name}</p>
       ) : (
-        <>
-          {isLoading ? <p>Fetching posts...</p> : <p>You have no posts yet.</p>}
-        </>
+        <p>You have no posts yet.</p>
       )}
     </div>
   )
